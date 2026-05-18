@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { LayoutDashboard, Upload, History, Cpu, Settings, AlertCircle } from 'lucide-react';
 
-const API = 'http://localhost:8000';
+const API = process.env.REACT_APP_API_URL || 'http://localhost:8000';
 
 const links = [
   { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
