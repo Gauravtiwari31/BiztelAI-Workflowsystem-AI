@@ -3,7 +3,7 @@ import { Upload, FileText, Image, Loader, CheckCircle, AlertTriangle, XCircle, A
 import ConfidenceBadge from '../components/ConfidenceBadge';
 import StatusBadge from '../components/StatusBadge';
 
-const API = 'http://localhost:8000';
+const API = process.env.REACT_APP_API_URL || 'http://localhost:8000';
 
 const FIELD_LABELS = {
   date: 'Date', shift: 'Shift', employee_number: 'Employee #',
