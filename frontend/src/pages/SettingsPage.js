@@ -30,6 +30,9 @@ export default function SettingsPage() {
   useEffect(() => { fetchStatus(); }, [fetchStatus]);
 
   // Load model list whenever key changes (debounced) or on mount if key exists
+  // helper shim (no window.ENV in CRA)
+  function os_getenv_model() { return ''; }
+
   const fetchModels = useCallback(async (keyOverride) => {
     const key = (keyOverride ?? geminiKey).trim();
     if (!key) { setModels([]); setModelError(''); return; }
@@ -61,9 +64,6 @@ export default function SettingsPage() {
       setLoadingModels(false);
     }
   }, [geminiKey, status]);
-
-  // helper shim (no window.ENV in CRA)
-  function os_getenv_model() { return ''; }
 
   // When status loads and there's an active model, pre-select it
   useEffect(() => {

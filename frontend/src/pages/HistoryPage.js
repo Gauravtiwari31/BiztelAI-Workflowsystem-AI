@@ -20,9 +20,7 @@ export default function HistoryPage({ navigate }) {
       .then(r => r.json())
       .then(d => { setRecords(d); setLoading(false); })
       .catch(() => setLoading(false));
-}, [search, status, page]); {
-  };
-
+  }, [search, statusFilter]);
 useEffect(() => {
   load();
 }, [load]);
