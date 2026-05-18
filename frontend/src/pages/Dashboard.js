@@ -3,7 +3,7 @@ import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, Tooltip, ResponsiveCo
 import { Upload, AlertTriangle, CheckCircle, Package, Activity, Clock } from 'lucide-react';
 import StatusBadge from '../components/StatusBadge';
 
-const API = 'http://localhost:8000';
+const API = process.env.REACT_APP_API_URL || 'http://localhost:8000';
 const COLORS = ['#6366f1','#22c55e','#f59e0b','#ef4444','#8b5cf6','#06b6d4'];
 
 function Stat({ icon: Icon, label, value, sub, color }) {
