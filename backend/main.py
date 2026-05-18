@@ -97,8 +97,8 @@ init_db()
 app = FastAPI(title="BiztelAI Workflow API", version="5.0.0")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000","https://biztel-ai-workflowsystem-ai-ic81.vercel.app/"],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
