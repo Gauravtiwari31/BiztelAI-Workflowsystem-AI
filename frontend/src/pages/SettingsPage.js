@@ -4,7 +4,7 @@ import {
   ExternalLink, Zap, Info, RefreshCw, ChevronDown,
 } from 'lucide-react';
 
-const API = 'http://localhost:8000';
+const API = process.env.REACT_APP_API_URL || 'http://localhost:8000';
 
 export default function SettingsPage() {
   const [status,    setStatus]    = useState(null);
