@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Search, Filter, RefreshCw, Loader } from 'lucide-react';
 import StatusBadge from '../components/StatusBadge';
 
-const API = 'http://localhost:8000';
+const API = process.env.REACT_APP_API_URL || 'http://localhost:8000';
 const STATUS_OPTS = ['', 'ok', 'reviewed', 'warning', 'error', 'failed', 'processing'];
 
 export default function HistoryPage({ navigate }) {
