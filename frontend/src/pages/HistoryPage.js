@@ -22,7 +22,9 @@ export default function HistoryPage({ navigate }) {
       .catch(() => setLoading(false));
   };
 
-  useEffect(() => { load(); }, []);
+useEffect(() => {
+  load();
+}, [load]);
 
   return (
     <div className="space-y-6">
