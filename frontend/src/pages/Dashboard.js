@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend } from 'recharts';
-import { Upload, AlertTriangle, CheckCircle, Package, Activity, Clock } from 'lucide-react';
+import { Upload, AlertTriangle, CheckCircle, Package } from 'lucide-react';
 import StatusBadge from '../components/StatusBadge';
 
 const API = process.env.REACT_APP_API_URL || 'http://localhost:8000';
