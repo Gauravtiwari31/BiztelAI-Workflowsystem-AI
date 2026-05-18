@@ -3,7 +3,7 @@ import { Save, ArrowLeft, AlertTriangle, XCircle, CheckCircle, Loader } from 'lu
 import ConfidenceBadge from '../components/ConfidenceBadge';
 import StatusBadge from '../components/StatusBadge';
 
-const API = 'http://localhost:8000';
+const API = process.env.REACT_APP_API_URL || 'http://localhost:8000';
 
 const FIELDS = [
   { key: 'date',             label: 'Date',           type: 'date'   },
