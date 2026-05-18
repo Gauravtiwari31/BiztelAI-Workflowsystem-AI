@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback  } from 'react';
 import { Search, Filter, RefreshCw, Loader } from 'lucide-react';
 import StatusBadge from '../components/StatusBadge';
 
@@ -11,7 +11,7 @@ export default function HistoryPage({ navigate }) {
   const [search, setSearch] = useState('');
   const [statusFilter, setStatusFilter] = useState('');
 
-  const load = () => {
+  const load = useCallback(async () => {
     setLoading(true);
     const params = new URLSearchParams();
     if (search) params.set('search', search);
@@ -20,6 +20,7 @@ export default function HistoryPage({ navigate }) {
       .then(r => r.json())
       .then(d => { setRecords(d); setLoading(false); })
       .catch(() => setLoading(false));
+}, [search, status, page]); {
   };
 
 useEffect(() => {
