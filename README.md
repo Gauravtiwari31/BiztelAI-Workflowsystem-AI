@@ -2,6 +2,14 @@
 
 A full-stack web application that digitises handwritten/semi-structured manufacturing operational documents using **Google Gemini 1.5 Flash** for OCR/extraction, with a review workflow, confidence scoring, validation, and operational analytics dashboard.
 
+## 🔗 Links
+
+| Resource | Link |
+|---|---|
+| 🚀 **Live Demo** | [biztel-ai-workflowsystem-ai-ic81.vercel.app](https://biztel-ai-workflowsystem-ai-ic81.vercel.app/) |
+| 🎬 **YouTube Demo** | [Watch on YouTube](https://youtu.be/UUyiovga2OQ?si=AYSAoEy0BK2MHros) |
+| 📄 **Workflow Document** | [View on Google Drive](https://drive.google.com/file/d/1anEkN3hNnqLNsQxptYZSiJ4fu3Go99Kz/view?usp=sharing) |
+
 ## Architecture
 
 ```
